@@ -1,1 +1,113 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+$main:#E6C7AB;
+$main-light:#FFE9D6;
+$dest:#c62b4f;
+$dest-b:#478896;
+
+
+
+body {
+    margin:0;
+    font-family: 'Rubik', sans-serif;
+    background-color: $main;
+}
+
+
+//////////////////////////////////////////fonts
+
+.header2 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.text {
+    line-height: 2rem;
+}
+
+.text-small{
+    font-size:12px;
+    line-height: 16px;
+}
+
+
+///////////////////////////////////////////cards
+
+
+.mainCard{
+    background-color: $dest-b;
+    padding:50px;
+    color:white;
+    padding:80px;
+}
+
+.whiteCard{
+    padding-top:0px;
+    background-color: $main-light;
+    padding:40px;
+}
+
+
+///////////////////////////////////////BUTTONS
+
+@mixin btnStart($bg:$dest, $color:white, $border:1px solid transparent){
+    padding:20px;
+    background-color:$bg;
+    color:$color;
+    border:$border;
+    border-radius: 5px;
+
+    
+}
+
+.btn {
+    @include btnStart();
+}
+
+
+.btnOutline {
+    @include btnStart($bg:transparent, $color:black, $border:1px solid $dest);
+}
+
+
+.btnSecond {
+    @include btnStart($bg:$dest-b);
+}
+
+
+
+
+
+////////////////////////////////
+
+
+
+
+.wrapp-cards{
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:500px;
+}
+
+
+
+
+@media (min-width: 1150px) {
+
+    .wrapp-cards {
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        height: 100vh;
+    }
+
+
+
+    .mainCard{
+        background-color: $dest-b;
+        padding:80px;
+    }
+
+    }

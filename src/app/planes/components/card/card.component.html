@@ -1,0 +1,31 @@
+
+<div class="card" [class]="(productDetails.plan === 'Pro')? 'mainCard':'whiteCard'">
+
+  <div class="image">
+    <img [src]="productDetails.image" alt="">
+  </div>
+
+  <p class="text-small">{{ productDetails.plan}}</p>
+  <h2 class="header2">{{ productDetails.price}}</h2>
+  <p class="text-small">Per month</p>
+
+  <ul>
+
+    <li class="text" *ngFor="let service of availableServices">
+      <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="done"></mat-icon>
+      {{ service }}
+      </li>
+    <li class="text unabilited" *ngFor="let prodDet of notAvailableServices">
+      <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="done"></mat-icon>
+      {{ prodDet }}
+      </li>
+
+
+
+  </ul>
+
+  <button [class]="getBtnStyle()">{{productDetails.btnText | uppercase}}</button>
+
+</div>
+
+
