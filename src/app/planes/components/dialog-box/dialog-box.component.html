@@ -1,0 +1,27 @@
+<h2 class="header2" mat-dialog-title>Our Plans</h2>
+<hr class="line">
+
+    <p class="text">
+        Please enter your email and we will contact you soon to talk about all our products and services.
+    </p>
+    
+
+    <form>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                    placeholder="Ex. pat@example.com">
+            <mat-hint>Email</mat-hint>
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </form>
+
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</div>
+

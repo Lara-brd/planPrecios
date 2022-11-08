@@ -1,5 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$blue-palette, 900);
+$my-accent: mat.define-palette(mat.$pink-palette, 600);
+$my-warn: mat.define-palette(mat.$pink-palette, 800);
+
+$my-theme: mat.define-light-theme((
+    color: (
+    primary: $my-primary,
+    accent: $my-accent,
+    warn: $my-warn,
+)
+));
+
+@include mat.all-component-themes($my-theme);
+
+
+
 
 $main:#E6C7AB;
 $main-light:#FFE9D6;
@@ -13,6 +33,17 @@ body {
     font-family: 'Rubik', sans-serif;
     background-color: $main;
 }
+
+.line {
+    border:none;
+    height: 1px;
+    background-color: #9b826d;
+
+}
+
+mat-dialog-container {
+    background-color:$main-light !important;
+    }
 
 
 //////////////////////////////////////////fonts
@@ -34,6 +65,12 @@ body {
 
 ///////////////////////////////////////////cards
 
+.wrapp-cards{
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 
 .mainCard{
     background-color: $dest-b;
@@ -42,7 +79,6 @@ body {
 }
 
 .whiteCard{
-    padding-top:0px;
     background-color: $main-light;
     padding:40px;
 }
@@ -77,19 +113,7 @@ body {
 
 
 
-
-////////////////////////////////
-
-
-
-
-.wrapp-cards{
-    max-width:1200px;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-
+////////////////////////////////Desktop size
 
 
 @media (min-width: 1150px) {
@@ -105,4 +129,4 @@ body {
         background-color: $dest-b;
     }
 
-    }
+}

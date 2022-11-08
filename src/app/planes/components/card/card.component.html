@@ -24,7 +24,8 @@
 
   </ul>
 
-  <button [class]="getBtnStyle()">{{productDetails.btnText | uppercase}}</button>
+  <button [class]="getBtnStyle()" (click)="openDialog()">{{productDetails.btnText | uppercase}}</button>
+
 
 </div>
 

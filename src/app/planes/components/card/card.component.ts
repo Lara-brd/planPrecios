@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProductDetail } from '../../interfaces/product-detail.interface';
+import {MatDialog} from '@angular/material/dialog';
+import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 
 
 @Component({
@@ -28,8 +30,9 @@ availableServices:string[]=[];
 notAvailableServices:string[]=[];
 
 
-  constructor(){
-  }
+  constructor( public dialog:MatDialog){}
+
+
 
 
   ngOnInit(): void {
@@ -51,8 +54,16 @@ notAvailableServices:string[]=[];
     }
   }
 
-  getClassList(){
-    
+  openDialog(){
+    this.dialog.open(DialogBoxComponent, {
+      maxWidth:'500px',
+      width:'60%',
+      data:"right click"
+
+    })
   }
 
+
 }
+
+
