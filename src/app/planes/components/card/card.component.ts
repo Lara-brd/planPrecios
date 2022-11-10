@@ -36,11 +36,10 @@ notAvailableServices:string[]=[];
 
 
   ngOnInit(): void {
-    
-    this.availableServices = this.services.slice(0, this.productDetails.available!);
-    this.notAvailableServices = this.services.slice(this.productDetails.available!);
-    
-  }
+
+      this.availableServices = this.services.slice(0, this.productDetails.available) || 0;
+      this.notAvailableServices = this.services.slice(this.productDetails.available) || 0;
+    }
 
 
 

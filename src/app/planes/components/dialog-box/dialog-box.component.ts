@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { MyErrorStateMatcher } from './error-state-matcher';
-
-
-
-
 
 
 
@@ -21,9 +17,10 @@ import { MyErrorStateMatcher } from './error-state-matcher';
 .example-full-width {
   width: 100%;
 }
-  
-  `]
+`]
 })
+
+
 export class DialogBoxComponent {
 
 

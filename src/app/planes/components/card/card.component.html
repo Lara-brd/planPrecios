@@ -12,10 +12,12 @@
   <ul>
 
     <li class="text" *ngFor="let service of availableServices">
+      <!-- lista de servicios activos -->
       <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="done"></mat-icon>
       {{ service }}
       </li>
     <li class="text unabilited" *ngFor="let prodDet of notAvailableServices">
+      <!-- lista de servicios inactivos -->
       <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="done"></mat-icon>
       {{ prodDet }}
       </li>
@@ -23,7 +25,7 @@
 
 
   </ul>
-
+  <!-- botones con diferentes estilos -->
   <button [class]="getBtnStyle()" (click)="openDialog()">{{productDetails.btnText | uppercase}}</button>
 
 

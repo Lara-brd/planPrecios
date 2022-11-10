@@ -19,6 +19,10 @@ Gracias a los mixins de SASS he podido crear fácilmente diferentes versiones de
 Cada color está recogido en una variable, de esta manera se puede cambiar toda la paleta de colores con solo poner otros valores en estas variables.
 
 
+# angula material
+Se ha utilizado angular material para la caja de diálogo y para el formulario donde se han implementado validaciones utilizando formularios reactivos.
+
+
 
 # Ana Sanz
 
