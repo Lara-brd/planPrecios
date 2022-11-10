@@ -2,26 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
-## Development server
+# Folding
+En el  directorio llamado planes-cards, se guardan el módulo y los componentes  encargados de mostrar los planes de negocio, de esta manera queda perfectamente ordenado si en un futuro crece la aplicación. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+En componentes se agrupan aquellos elementos que son reusables. Aquí tenemos el componente Card y el cuadro de diálogo que se despliega al pulsar los botones de las tarjetas. El decorador @Input() nos manda información desde el padre, de esta manera la misma tarjeta nos sirve para mostrar tres planes de negocio distintos. 
 
-## Code scaffolding
+# Card reusability
+Para mandar información desde el padre al componente Card he creado un objeto y una interfaz para este. La lista de los servicios ofrecidos es la misma en las tres tarjetas así que en el componente card he creado una propiedad que contiene un array de strings con estos servicios, este array es el que muestro con ngFor, desde el padre solo envío la cantidad de servicios que están activos en cada plan. De esta manera no tengo que repetir tres veces la lista de servicios, en su lugar solo mando un número.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para las tarjetas hay dos estilos uno para la principal y otro para el resto. Utilizo el atributo [ class ] con un operador ternario en la vista de card, así que dependiendo del tipo de plan se añade una u otra clase.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# styles width SASS
+Gracias a los mixins de SASS he podido crear fácilmente diferentes versiones de un mismo botón. He implementado un método en el componente card que llama al botón que corresponde a cada tarjeta.
 
-## Running unit tests
+Cada color está recogido en una variable, de esta manera se puede cambiar toda la paleta de colores con solo poner otros valores en estas variables.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Ana Sanz
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
