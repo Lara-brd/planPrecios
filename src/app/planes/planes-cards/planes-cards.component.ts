@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProductDetail } from '../interfaces/product-detail.interface';
 
 @Component({
@@ -6,7 +6,7 @@ import { ProductDetail } from '../interfaces/product-detail.interface';
   templateUrl: './planes-cards.component.html',
   styles: []
 })
-export class PlanesCardsComponent implements OnInit {
+export class PlanesCardsComponent {
 
 
 
@@ -48,10 +48,5 @@ export class PlanesCardsComponent implements OnInit {
 
   }
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
